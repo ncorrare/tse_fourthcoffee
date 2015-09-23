@@ -1,0 +1,16 @@
+{
+  "name": "tse-tse_fourthcoffee",
+  "version": "0.1.0",
+  "author": "tse",
+  "summary": "Boilerplate module to demonstrate DSC Capabilities",
+  "license": "Apache-2.0",
+  "source": "",
+  "project_page": null,
+  "issues_url": null,
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"},
+    {"name":"puppetlabs-reboot","version_requirement":">= 1.1.0"},
+    {"name":"puppetlabs-dsc","version_requirement":">= 0.8.1"}
+  ]
+}
+
