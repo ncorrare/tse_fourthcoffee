@@ -15,7 +15,8 @@ class tse_fourthcoffee (
   $zipfile = "${zippath}\\${zipname}"
 
   reboot { 'afterpowershell':
-    when => pending,
+    when    => pending,
+    timeout => 15,
   }
   service { 'wuauserv':
     ensure => 'running',
