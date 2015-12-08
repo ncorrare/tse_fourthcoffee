@@ -82,4 +82,33 @@ class tse_fourthcoffee (
     dsc_state        => 'Started',
     dsc_physicalpath => $destinationpath,
   }
+  dsc_xfirewall { 'Allow RDP':
+    dsc_name      => "$name Allow RDP",
+    dsc_ensure    => 'present',
+    dsc_direction => 'Inbound',
+    dsc_localport => '3389',
+    dsc_protocol  => 'TCP',
+    dsc_access    => 'Allow',
+    require       => Dsc::Lcm_config['disable_lcm'],
+  }
+
+  dsc_xfirewall { 'Allow WinRM':
+    dsc_name      => "$name Allow WinRM",
+    dsc_ensure    => 'present',
+    dsc_direction => 'Inbound',
+    dsc_localport => '5985',
+    dsc_protocol  => 'TCP',
+    dsc_access    => 'Allow',
+    require       => Dsc::Lcm_config['disable_lcm'],
+  }
+
+  dsc_xfirewall { 'Allow HTTP':
+    dsc_name      => "$name Allow HTTP",
+    dsc_ensure    => 'present',
+    dsc_direction => 'Inbound',
+    dsc_localport => '80',
+    dsc_protocol  => 'TCP',
+    dsc_access    => 'Allow',
+    require       => Dsc::Lcm_config['disable_lcm'],
+  }
 }
