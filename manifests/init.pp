@@ -88,7 +88,7 @@ class tse_fourthcoffee (
     dsc_direction => 'Inbound',
     dsc_localport => '3389',
     dsc_protocol  => 'TCP',
-    dsc_access    => 'Allow',
+    dsc_action    => 'Allow',
     require       => Dsc::Lcm_config['disable_lcm'],
   }
 
@@ -98,7 +98,7 @@ class tse_fourthcoffee (
     dsc_direction => 'Inbound',
     dsc_localport => '5985',
     dsc_protocol  => 'TCP',
-    dsc_access    => 'Allow',
+    dsc_action    => 'Allow',
     require       => Dsc::Lcm_config['disable_lcm'],
   }
 
@@ -108,7 +108,7 @@ class tse_fourthcoffee (
     dsc_direction => 'Inbound',
     dsc_localport => '80',
     dsc_protocol  => 'TCP',
-    dsc_access    => 'Allow',
+    dsc_action    => 'Allow',
     require       => Dsc::Lcm_config['disable_lcm'],
   }
 }
